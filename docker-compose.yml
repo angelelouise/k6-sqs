@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  k6-sqs:
+    container_name: k6-sqs
+    build: .
+    network_mode: host
+    user: root
+    command: command
+    volumes:
+      - ./tests:/tests
+      - ~/.aws/:root/.aws/
+    environment:
+      AWS_REGION: sa-east-1
