@@ -1,5 +1,5 @@
 #Multi-stage build to generate custom k6 with extension
-FROM golang:1.17 as builder
+FROM golang:1.18-alpine as builder
 
 WORKDIR $GOPATH/src/go.k6.io/k6
 
